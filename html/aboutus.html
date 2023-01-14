@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EatSafely</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+
+
+    <!-- ==== STYLE.CSS ==== -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- ====  REMIXICON CDN ==== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body>
+    <!-- ==== HEADER ==== -->
+    <header class="container header">
+      <!-- ==== NAVBAR ==== -->
+      <nav class="nav">
+        <div class="logo">
+            <img src="img/logo-green.png" alt="" class="logo" width="200px">
+        </div>
+
+        <div class="nav_menu" id="nav_menu">
+          <button class="close_btn" id="close_btn">
+            <i class="ri-close-fill"></i>
+          </button>
+
+          <ul class="nav_menu_list">
+            <li class="nav_menu_item">
+              <a href="home.html" class="nav_menu_link">Home</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="aboutus.html" class="nav_menu_link">About Us</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="app.html" class="nav_menu_link">App</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="toggle_btn" id="toggle_btn">
+          <i class="ri-menu-line"></i>
+        </button>
+      </nav>
+    </header>
+
+    <section class="wrapper">
+      <div class="container">
+        <div class="grid-cols-2">
+          <div class="grid-item-2">
+            <h1 class="main-heading">About Us!
+            </h1>
+            <p class="info-text">
+                According to the Centers for Disease Control and Prevention (CDC), there are an estimated 48 million cases of foodborne illness in the United States each year. This results in approximately 128,000 hospitalizations and 3,000 deaths. The most common causes of foodborne illness are norovirus, Salmonella, and Clostridium perfringens. The CDC also estimates that the economic cost of foodborne illness in the United States is around $15.6 billion per year. These figures are based on data collected by the CDC and other federal agencies, as well as research studies. A portion of this would be from spoiled food.
+                <br><br>
+                So, we created this web app that detects spoiled food to prevent hospitalizations that could have monetary consequences.            </p>
+
+          </div>
+          <div class="grid-item-2">
+            <h1 class="main-heading">Creators:
+            </h1>
+            <p class="info-text">
+                Art3mis#0001 <br>
+                TheCoolDev#4118 <br>
+                Prolific Tutor#6226
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== ANIMATE ON SCROLL JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ==== GSAP CDN ==== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- ==== SCRIPT.JS ==== -->
+    <script src="./script.js" defer></script>
+  </body>
+</html>
+
