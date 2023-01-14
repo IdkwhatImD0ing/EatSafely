@@ -17,4 +17,4 @@ Dataset is taken from this website.
 
 ### What are our goals for the website
 
-![gif1](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F858569116433275404%2F&psig=AOvVaw1n1uHkBXfhtswRic8DrNI5&ust=1673814335586000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjVh8Dyx_wCFQAAAAAdAAAAABAD)
+![gif1]([[https://user-[images.githubusercontent.com/82910305/173235953-f1c8310d-44f2-4db7-b0b4-1437f5efbed2.gif](https://media.tenor.com/L6hpW9_KrzUAAAAM/veggie-hey.gif)])
