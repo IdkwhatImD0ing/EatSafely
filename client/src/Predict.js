@@ -1,5 +1,13 @@
 import React, {useState, useRef, useEffect} from 'react';
-import {Box, Stack, Typography} from '@mui/material';
+import {
+  Box,
+  Stack,
+  Typography,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from '@mui/material';
 import {labels} from './information';
 
 import './Styles/Remix.css';
@@ -11,6 +19,7 @@ export default function Predict() {
   const [imageData, setImageData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [prediction, setPrediction] = useState(null);
+  const [selected, setSelected] = useState('null');
 
   const handleImage = (e) => {
     if (e.target.files[0]) {
@@ -22,7 +31,6 @@ export default function Predict() {
 
   const onSubmit = () => {
     // Send the image to the backend
-    console.log(imageData);
     const data = imageData.data;
     const length = imageData.height;
     const width = imageData.width;
@@ -51,6 +59,28 @@ export default function Predict() {
         setLoading(false);
         setPrediction(data);
       });
+  };
+
+  const handleChange = (event) => {
+    setSelected(event.target.value);
+    // Make this image a string
+    const img = new Image();
+    img.src = event.target.value;
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.height = img.height;
+      canvas.width = img.width;
+      ctx.drawImage(img, 0, 0);
+      canvas.toBlob(
+        (blob) => {
+          const file = new File([blob], 'image.jpg', {type: 'image/jpeg'});
+          setImage(file);
+        },
+        'image/jpeg',
+        1,
+      );
+    };
   };
 
   useEffect(() => {
@@ -116,6 +146,25 @@ export default function Predict() {
         <div className="container">
           <div className="app_wrapper">
             <Stack direction="column" alignItems="center" spacing={2}>
+              <Typography variant="h4">
+                Upload an image or choose one of our demo images below!
+              </Typography>
+              <FormControl>
+                <InputLabel id="select-label">Example</InputLabel>
+                <Select
+                  labelId="select-label"
+                  id="select"
+                  value={selected}
+                  label="Age"
+                  onChange={handleChange}
+                >
+                  {[...Array(7).keys()].map((i) => (
+                    <MenuItem value={i + '.jpg'} key={i}>
+                      {i + '.jpg'}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
               <input
                 type="file"
                 accept="image/png, image/jpeg, image/jpg"

@@ -135,6 +135,7 @@ button {
   color: var(--primary-color);
 }
 .btn_wrapper {
+  margin-top: 2rem;
   display: flex;
   text-align: center;
   align-self: center;
