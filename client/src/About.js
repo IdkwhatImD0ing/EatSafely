@@ -76,7 +76,8 @@ export default function About() {
                 <p className="info-text">
                   Art3mis#0001 <br />
                   TheCoolDev#4118 <br />
-                  Prolific Tutor#6226
+                  Prolific Tutor#6226 <br/>
+                  PoPsMokE#5081
                 </p>
               </div>
             </div>
