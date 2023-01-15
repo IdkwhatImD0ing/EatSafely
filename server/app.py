@@ -21,8 +21,6 @@ def predict():
     data = request.get_json()
     # Convert to numpy array
     data = np.asarray(data, dtype=np.uint8)
-    print(data.shape)
-
     img = Image.fromarray(data, 'RGB')
     img.save('my.png')
     img.show()

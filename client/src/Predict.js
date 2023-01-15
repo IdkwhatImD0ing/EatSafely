@@ -61,10 +61,10 @@ export default function Predict() {
         img.src = e.target.result;
         img.onload = () => {
           const canvas = document.createElement('canvas');
-          canvas.width = img.width;
-          canvas.height = img.height;
+          canvas.width = 256;
+          canvas.height = 256;
           const ctx = canvas.getContext('2d');
-          ctx.drawImage(img, 0, 0);
+          ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, 256, 256);
           const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
           setImageData(imageData);
         };
