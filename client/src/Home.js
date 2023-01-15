@@ -73,8 +73,10 @@ export default function Home() {
                 </p>
 
                 <div className="btn_wrapper">
-                  <button className="btn view_more_btn">
+                  <button className="btn view_more_btn"> 
+                  <a className="view_more_btn" href='predict'>
                     Try App <i className="ri-arrow-right-line"></i>
+                  </a>
                   </button>
                 </div>
               </div>
