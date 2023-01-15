@@ -16,6 +16,7 @@ export default function Predict() {
     if (e.target.files[0]) {
       // Resize the image to 300x300
       setImage(e.target.files[0]);
+      setPrediction(null);
     }
   };
 
@@ -36,7 +37,7 @@ export default function Predict() {
       }
     }
     setLoading(true);
-    fetch('http://localhost:5000/predict', {
+    fetch('https://eatserver.hop.sh/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
