@@ -1,5 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react';
-import {Stack, Typography} from '@mui/material';
+import {Box, Stack, Typography} from '@mui/material';
 import {labels} from './information';
 
 import './Styles/Remix.css';
@@ -76,14 +76,6 @@ export default function Predict() {
 
   return (
     <>
-      <head>
-        <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>EatSafely</title>
-        <link rel="icon" type="image/png" href="public/favicon.png" />
-      </head>
-
       <header className="container header">
         <nav className="nav">
           <div className="logo">
@@ -123,37 +115,29 @@ export default function Predict() {
       <section className="wrapper">
         <div className="container">
           <div className="app_wrapper">
-            <Stack
-              direction="column"
-              alignContent="center"
-              justifyContent="center"
-              spacing={2}
-            >
-              <div className="btn_wrapper">
-                <input
-                  type="file"
-                  accept="image/png, image/jpeg, image/jpg"
-                  onChange={handleImage}
-                  multiple={false}
-                  ref={fileInputRef}
-                  hidden
-                />
-                <button
-                  className="btn upl_btn"
-                  onClick={() => {
-                    fileInputRef.current.click();
-                  }}
-                >
-                  Upload <i className="ri-file-upload-line"></i>
-                </button>
-              </div>
+            <Stack direction="column" alignItems="center" spacing={2}>
+              <input
+                type="file"
+                accept="image/png, image/jpeg, image/jpg"
+                onChange={handleImage}
+                multiple={false}
+                ref={fileInputRef}
+                hidden
+              />
+              <button
+                className="btn upl_btn"
+                onClick={() => {
+                  fileInputRef.current.click();
+                }}
+              >
+                Upload <i className="ri-file-upload-line"></i>
+              </button>
+
               {image && <img src={URL.createObjectURL(image)} alt="" />}
               {image && (
-                <div className="btn_wrapper">
-                  <button className="btn upl_btn" onClick={onSubmit}>
-                    Submit <i className="ri-file-upload-line"></i>
-                  </button>
-                </div>
+                <button className="btn upl_btn" onClick={onSubmit}>
+                  Submit
+                </button>
               )}
               {loading && <p>Loading...</p>}
               {prediction && (
@@ -170,6 +154,7 @@ export default function Predict() {
           </div>
         </div>
       </section>
+      <Box height="10vh" />
 
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>

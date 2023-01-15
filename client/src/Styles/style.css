@@ -135,8 +135,11 @@ button {
   color: var(--primary-color);
 }
 .btn_wrapper {
-  margin-top: 3.5rem;
   display: flex;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  align-content: center;
   width: 100%;
 }
 .btn {
@@ -179,7 +182,6 @@ button {
   letter-spacing: 0;
   color: #fff;
   font-weight: 500;
-  margin-left: 420px;
   box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
 }
 

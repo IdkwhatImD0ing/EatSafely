@@ -10,85 +10,69 @@ export default function Home() {
 
   return (
     <>
-      <head>
-        <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>EatSafely</title>
-        <link rel="icon" type="image/png" href="public/favicon.png" />
-      </head>
-      <body>
-        <header className="container header">
-          <nav className="nav">
-            <div className="logo">
-              <img
-                src="/logo-green.png"
-                alt=""
-                className="logo"
-                width="200px"
-              />
-            </div>
+      <header className="container header">
+        <nav className="nav">
+          <div className="logo">
+            <img src="/logo-green.png" alt="" className="logo" width="200px" />
+          </div>
 
-            <div className="nav_menu" id="nav_menu">
-              <button className="close_btn" id="close_btn">
-                <i className="ri-close-fill"></i>
-              </button>
-
-              <ul className="nav_menu_list">
-                <li className="nav_menu_item">
-                  <a href="/" className="nav_menu_link">
-                    Home
-                  </a>
-                </li>
-                <li className="nav_menu_item">
-                  <a href="about" className="nav_menu_link">
-                    About Us
-                  </a>
-                </li>
-                <li className="nav_menu_item">
-                  <a href="predict" className="nav_menu_link">
-                    App
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <button className="toggle_btn" id="toggle_btn">
-              <i className="ri-menu-line"></i>
+          <div className="nav_menu" id="nav_menu">
+            <button className="close_btn" id="close_btn">
+              <i className="ri-close-fill"></i>
             </button>
-          </nav>
-        </header>
 
-        <section className="wrapper">
-          <div className="container">
-            <div className="grid-cols-2">
-              <div className="grid-item-1">
-                <h1 className="main-heading">
-                  Eat Smart,
-                  <br />
-                  Live Well.
-                </h1>
-                <p className="info-text">
-                  With our app, you'll know what's healthy in no time!
-                </p>
+            <ul className="nav_menu_list">
+              <li className="nav_menu_item">
+                <a href="/" className="nav_menu_link">
+                  Home
+                </a>
+              </li>
+              <li className="nav_menu_item">
+                <a href="about" className="nav_menu_link">
+                  About Us
+                </a>
+              </li>
+              <li className="nav_menu_item">
+                <a href="predict" className="nav_menu_link">
+                  App
+                </a>
+              </li>
+            </ul>
+          </div>
 
-                <div className="btn_wrapper">
-                  <button className="btn view_more_btn"> 
-                  <a className="view_more_btn" href='predict'>
-                    Try App <i className="ri-arrow-right-line"></i>
-                  </a>
-                  </button>
-                </div>
+          <button className="toggle_btn" id="toggle_btn">
+            <i className="ri-menu-line"></i>
+          </button>
+        </nav>
+      </header>
+
+      <section className="wrapper">
+        <div className="container">
+          <div className="grid-cols-2">
+            <div className="grid-item-1">
+              <h1 className="main-heading">
+                Eat Smart,
+                <br />
+                Live Well.
+              </h1>
+              <p className="info-text">
+                With our app, you'll know what's healthy in no time!
+              </p>
+
+              <div className="btn_wrapper">
+                <button className="btn view_more_btn">
+                  Try App <i className="ri-arrow-right-line"></i>
+                </button>
               </div>
-              <div className="grid-item-2">
-                <div className="team_img_wrapper">
-                  <img src="/fruits.png" alt="team-img" />
-                </div>
+            </div>
+            <div className="grid-item-2">
+              <div className="team_img_wrapper">
+                <img src="/fruits.png" alt="team-img" />
               </div>
             </div>
           </div>
-        </section>
-      </body>
+        </div>
+      </section>
     </>
   );
 }
