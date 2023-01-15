@@ -6,53 +6,53 @@ export default function About() {
   return (
     <>
       <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>EatSafely</title>
       </head>
       <body>
-        <header class="container header">
-          <nav class="nav">
-            <div class="logo">
-              <img src="logo-green.png" alt="" class="logo" width="200px" />
+        <header className="container header">
+          <nav className="nav">
+            <div className="logo">
+              <img src="logo-green.png" alt="" className="logo" width="200px" />
             </div>
 
-            <div class="nav_menu" id="nav_menu">
-              <button class="close_btn" id="close_btn">
-                <i class="ri-close-fill"></i>
+            <div className="nav_menu" id="nav_menu">
+              <button className="close_btn" id="close_btn">
+                <i className="ri-close-fill"></i>
               </button>
 
-              <ul class="nav_menu_list">
-                <li class="nav_menu_item">
-                  <a href="/" class="nav_menu_link">
+              <ul className="nav_menu_list">
+                <li className="nav_menu_item">
+                  <a href="/" className="nav_menu_link">
                     Home
                   </a>
                 </li>
-                <li class="nav_menu_item">
-                  <a href="about" class="nav_menu_link">
+                <li className="nav_menu_item">
+                  <a href="about" className="nav_menu_link">
                     About Us
                   </a>
                 </li>
-                <li class="nav_menu_item">
-                  <a href="predict" class="nav_menu_link">
+                <li className="nav_menu_item">
+                  <a href="predict" className="nav_menu_link">
                     App
                   </a>
                 </li>
               </ul>
             </div>
 
-            <button class="toggle_btn" id="toggle_btn">
-              <i class="ri-menu-line"></i>
+            <button className="toggle_btn" id="toggle_btn">
+              <i className="ri-menu-line"></i>
             </button>
           </nav>
         </header>
-        <section class="wrapper">
-          <div class="container">
-            <div class="grid-cols-2">
-              <div class="grid-item-2">
-                <h1 class="main-heading">About Us!</h1>
-                <p class="info-text">
+        <section className="wrapper">
+          <div className="container">
+            <div className="grid-cols-2">
+              <div className="grid-item-2">
+                <h1 className="main-heading">About Us!</h1>
+                <p className="info-text">
                   According to the Centers for Disease Control and Prevention
                   (CDC), there are an estimated 48 million cases of foodborne
                   illness in the United States each year. This results in
@@ -71,9 +71,9 @@ export default function About() {
                   unhealthy fruits{' '}
                 </p>
               </div>
-              <div class="grid-item-2">
-                <h1 class="main-heading">Creators:</h1>
-                <p class="info-text">
+              <div className="grid-item-2">
+                <h1 className="main-heading">Creators:</h1>
+                <p className="info-text">
                   Art3mis#0001 <br />
                   TheCoolDev#4118 <br />
                   Prolific Tutor#6226

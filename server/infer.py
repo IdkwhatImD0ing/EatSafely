@@ -1,4 +1,5 @@
 import tensorflow as tf
+from keras.applications.mobilenet_v2 import preprocess_input
 
 class Inferrer:
 
@@ -16,12 +17,12 @@ class Inferrer:
 
     def infer(self, image=None):
         # Preprocesses the image
-        image = self.preprocess(image)
+        image = preprocess_input(image)
         # Converts the image to a tensor
         image = tf.convert_to_tensor(image, dtype=tf.float32)
         
-        # Gets the prediction
-        prediction = self.predict(image)['dense_21']
+        # Gets the prediction)
+        prediction = self.predict(image)['dense_8']
         # Gets the prediction
         prediction = prediction.numpy()
         # Get highest element in prediction
