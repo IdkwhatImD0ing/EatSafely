@@ -60,9 +60,11 @@ export default function Home() {
               </p>
 
               <div className="btn_wrapper">
-                <button className="btn view_more_btn">
-                  Try App <i className="ri-arrow-right-line"></i>
-                </button>
+                <a href="/predict">
+                  <button className="btn view_more_btn">
+                    Try App <i className="ri-arrow-right-line"></i>
+                  </button>
+                </a>
               </div>
             </div>
             <div className="grid-item-2">
