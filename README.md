@@ -2,7 +2,7 @@
 # EatSafely
 EatSafely is a web application designed to detect spoiled fruits and prevent foodborne illness. By utilizing image recognition technology, our app is able to identify fruits that have gone bad and alert the user to dispose of them. 
 
-![Logo](https://user-images.githubusercontent.com/76424367/212520495-53abf833-8540-4f04-9135-c6c342433a95.png) 
+![Logo](https://user-images.githubusercontent.com/76424367/212525612-395caeb1-b7e0-498f-9c03-db8adfe8980a.png) 
 
 ## Getting Started 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
@@ -39,7 +39,7 @@ npm start
 
 ## Treasure Hacks 3.0
 
-EatSafety is a project submission for the Treasure Hacks hackathon 3.0
+EatSafely is a project submission for the Treasure Hacks hackathon 3.0
 
 ### Inspiration
 According to the Centers for Disease Control and Prevention (CDC), there are an estimated 48 million cases of foodborne illness in the United States each year. This results in approximately 128,000 hospitalizations and 3,000 deaths. The most common causes of foodborne illness are norovirus, Salmonella, and Clostridium perfringens. The CDC also estimates that the economic cost of foodborne illness in the United States is around $15.6 billion per year. A portion of this would be from spoiled food(fruits).
@@ -50,8 +50,12 @@ EatSafely is a web app that detects spoiled food(fruits) to prevent hospitalizat
 With the integration of Machine Learning and some dataset the webapp will be able to identify each image of a fruit uploaded and determines if it's is safe to eat.
 
 ## Authors  
-*  **IdkwhatImD0ing** - [IdkwhatImD0ing](https://github.com/IdkwhatImD0ing)
+*  **Art3mis** - [IdkwhatImD0ing](https://github.com/IdkwhatImD0ing)
 * **TheCoolDeveloper** - [TheCoolGDev](https://github.com/TheCoolGDev)
+* **Suryangsu Chandra** - [PoPsMokE07](https://github.com/PoPsMokE07)
+* **Prolific Tutor** - [Mohashar](https://github.com/Mohashar)
+
+
 
 ## License 
 This project is licensed under the MIT License.
