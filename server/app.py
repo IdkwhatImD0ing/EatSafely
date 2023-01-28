@@ -21,9 +21,9 @@ def predict():
     data = request.get_json()
     # Convert to numpy array
     data = np.asarray(data, dtype=np.uint8)
-    img = Image.fromarray(data, 'RGB')
-    img.save('my.png')
-    img.show()
+    #img = Image.fromarray(data, 'RGB')
+    #img.save('my.png')
+    #img.show()
 
     # Resize to (256, 256, 3)
     data = cv2.resize(data, (256, 256), interpolation=cv2.INTER_CUBIC)
