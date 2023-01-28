@@ -35,7 +35,7 @@ def predict():
     
     # Get prediction
     prediction = inferrer.infer(data)
-    print(prediction)
+    #print(prediction)
     
     # Send prediction in body
     return jsonify(prediction)
