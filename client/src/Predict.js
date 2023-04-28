@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef, useEffect} from 'react'
 import {
   Box,
   Stack,
@@ -7,11 +7,11 @@ import {
   InputLabel,
   Select,
   MenuItem,
-} from '@mui/material';
-import {labels} from './information';
+} from '@mui/material'
+import {labels} from './information'
 
-import './Styles/Remix.css';
-import './Styles/style.css';
+import './Styles/Remix.css'
+import './Styles/style.css'
 
 export default function Predict() {
   const fileInputRef = useRef(null);
@@ -24,28 +24,28 @@ export default function Predict() {
   const handleImage = (e) => {
     if (e.target.files[0]) {
       // Resize the image to 300x300
-      setImage(e.target.files[0]);
-      setPrediction(null);
+      setImage(e.target.files[0])
+      setPrediction(null)
     }
-  };
+  }
 
   const onSubmit = () => {
     // Send the image to the backend
-    const data = imageData.data;
-    const length = imageData.height;
-    const width = imageData.width;
-    const imageArray = new Array(length);
+    const data = imageData.data
+    const length = imageData.height
+    const width = imageData.width
+    const imageArray = new Array(length)
     for (let i = 0; i < length; i++) {
-      imageArray[i] = new Array(width);
+      imageArray[i] = new Array(width)
       for (let j = 0; j < width; j++) {
-        const red = data[(i * width + j) * 4];
-        const green = data[(i * width + j) * 4 + 1];
-        const blue = data[(i * width + j) * 4 + 2];
-        imageArray[i][j] = [red, green, blue];
+        const red = data[(i * width + j) * 4]
+        const green = data[(i * width + j) * 4 + 1]
+        const blue = data[(i * width + j) * 4 + 2]
+        imageArray[i][j] = [red, green, blue]
       }
     }
-    setLoading(true);
-    fetch('https://eatserver.hop.sh/predict', {
+    setLoading(true)
+    fetch('https://api.art3m1s.me/eatsafely/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -56,53 +56,53 @@ export default function Predict() {
         (response) => response.json(), // if the response is a JSON object
       )
       .then((data) => {
-        setLoading(false);
-        setPrediction(data);
-      });
-  };
+        setLoading(false)
+        setPrediction(data)
+      })
+  }
 
   const handleChange = (event) => {
-    setSelected(event.target.value);
+    setSelected(event.target.value)
     // Make this image a string
-    const img = new Image();
-    img.src = event.target.value;
+    const img = new Image()
+    img.src = event.target.value
     img.onload = () => {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      canvas.height = img.height;
-      canvas.width = img.width;
-      ctx.drawImage(img, 0, 0);
+      const canvas = document.createElement('canvas')
+      const ctx = canvas.getContext('2d')
+      canvas.height = img.height
+      canvas.width = img.width
+      ctx.drawImage(img, 0, 0)
       canvas.toBlob(
         (blob) => {
-          const file = new File([blob], 'image.jpg', {type: 'image/jpeg'});
-          setImage(file);
+          const file = new File([blob], 'image.jpg', {type: 'image/jpeg'})
+          setImage(file)
         },
         'image/jpeg',
         1,
-      );
-    };
-  };
+      )
+    }
+  }
 
   useEffect(() => {
     // Transform the image into a 2d array and store in state
     if (image) {
-      const reader = new FileReader();
+      const reader = new FileReader()
       reader.onload = (e) => {
-        const img = new Image();
-        img.src = e.target.result;
+        const img = new Image()
+        img.src = e.target.result
         img.onload = () => {
-          const canvas = document.createElement('canvas');
-          canvas.width = 256;
-          canvas.height = 256;
-          const ctx = canvas.getContext('2d');
-          ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, 256, 256);
-          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          setImageData(imageData);
-        };
-      };
-      reader.readAsDataURL(image);
+          const canvas = document.createElement('canvas')
+          canvas.width = 256
+          canvas.height = 256
+          const ctx = canvas.getContext('2d')
+          ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, 256, 256)
+          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+          setImageData(imageData)
+        }
+      }
+      reader.readAsDataURL(image)
     }
-  }, [image]);
+  }, [image])
 
   return (
     <>
@@ -179,7 +179,7 @@ export default function Predict() {
               <button
                 className="btn upl_btn"
                 onClick={() => {
-                  fileInputRef.current.click();
+                  fileInputRef.current.click()
                 }}
               >
                 Upload <i className="ri-file-upload-line"></i>
@@ -212,5 +212,5 @@ export default function Predict() {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
       <script src="./script.js" defer></script>
     </>
-  );
+  )
 }
