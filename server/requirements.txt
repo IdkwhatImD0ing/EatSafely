@@ -77,8 +77,6 @@ ssh-import-id==5.10
 tensorboard==2.11.2
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
-tensorflow-cpu==2.11.0
-tensorflow-estimator==2.11.0
 tensorflow-io-gcs-filesystem==0.29.0
 urllib3==1.26.14
 zipp==1.0.0

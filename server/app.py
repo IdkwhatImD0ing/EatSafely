@@ -12,7 +12,7 @@ inferrer = Inferrer()
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return "<p>Welcome to eatsafely backend!</p>"
 
 @app.route("/predict", methods=["POST"])
 def predict():
