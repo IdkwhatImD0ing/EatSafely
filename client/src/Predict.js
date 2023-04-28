@@ -14,12 +14,12 @@ import './Styles/Remix.css'
 import './Styles/style.css'
 
 export default function Predict() {
-  const fileInputRef = useRef(null)
-  const [image, setImage] = useState(null)
-  const [imageData, setImageData] = useState(null)
-  const [loading, setLoading] = useState(false)
-  const [prediction, setPrediction] = useState(null)
-  const [selected, setSelected] = useState('null')
+  const fileInputRef = useRef(null);
+  const [image, setImage] = useState(null);
+  const [imageData, setImageData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [prediction, setPrediction] = useState(null);
+  const [selected, setSelected] = useState('');
 
   const handleImage = (e) => {
     if (e.target.files[0]) {
@@ -157,6 +157,9 @@ export default function Predict() {
                   value={selected}
                   label="Age"
                   onChange={handleChange}
+                  sx={{
+                    width: '100px',
+                  }}
                 >
                   {[...Array(7).keys()].map((i) => (
                     <MenuItem value={i + '.jpg'} key={i}>
